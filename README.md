@@ -61,7 +61,7 @@
 
   `USE DEFAULT;`
 
-  `CREATE ANALYTICS FUNCTION getInsuranceEstimate(number, text, number, number, text, text) AS "quote", "Model.getSentiment" AT insurancequote;`
+  `CREATE ANALYTICS FUNCTION getInsuranceEstimate(number, text, number, number, text, text) AS "quote", "Model.getPrediction" AT insurancequote;`
 
 ## Run Machine Learning Inference
 
