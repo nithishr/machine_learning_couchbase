@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import pickle
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import r2_score, mean_squared_error, accuracy_score
+from sklearn.metrics import r2_score, mean_squared_error
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.pipeline import Pipeline
 import category_encoders as ce
@@ -50,4 +50,4 @@ test_data = {
 print(model.predict(pd.DataFrame([test_data]))[0])
 
 # Save the Model
-pickle.dump(model, open("pipeline/regression_model", "wb"), protocol=1)
+pickle.dump(model, open("pipeline/regression_model.pkl", "wb"), protocol=1)

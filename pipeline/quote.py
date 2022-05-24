@@ -11,12 +11,12 @@ class Model(object):
     # the file sent to it using the model in memory
 
     def __init__(self):
-        pickle_path = os.path.join(os.path.dirname(__file__), "regression_model")
+        pickle_path = os.path.join(os.path.dirname(__file__), "regression_model.pkl")
         f = open(pickle_path, "rb")
         self.pipeline = pickle.load(f)
         f.close()
 
-    # Method to predict the sentiment
+    # Method to predict the insurance quote
     def getPrediction(self, age, sex, bmi, children, smoker, region):
         test_data = {
             "age": age,

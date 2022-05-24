@@ -30,7 +30,7 @@
 
   `pip install -r requirements.txt`
 
-- Run the Python script that generates the model `regression_model` in pipeline.
+- Run the Python script that generates the model `regression_model.pkl` in pipeline.
 
   `python training_model_insurance.py`
 
@@ -61,7 +61,7 @@
 
   `USE DEFAULT;`
 
-  `CREATE ANALYTICS FUNCTION getInsuranceEstimate(number, text, number, number, text, text) AS "quote", "Model.getPrediction" AT insurancequote;`
+  `CREATE ANALYTICS FUNCTION getInsuranceEstimate(age, sex, bmi, children, smoker, region) AS "quote", "Model.getPrediction" AT insurancequote;`
 
 ## Run Machine Learning Inference
 
