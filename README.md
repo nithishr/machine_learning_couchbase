@@ -72,3 +72,18 @@
 - The output from ML model can be seen on the output window
 
   `[ { "quote": 7232.8861764099165 } ]`
+
+## Running the Machine Learning Interface using Python App
+
+There is a sample [application](insurance_quote_app.py) written using [Streamlit](https://streamlit.io/) to access the inference using Python.
+
+![Screnshot of the application](screenshot.png "Application to interface with the ML model running on the Database")
+
+### Running the Application
+
+- Create a bucket like `insurance-quotes` in Couchbase to store the insurance quotes. Also create the primary index for the bucket so that we can access the data using SQL++ queries.
+  `` CREATE PRIMARY INDEX on `insurance-quotes` ``
+- The database settings are accessed from a `.env` file. Create a copy of `.env.example` & rename it to `.env` & add the values for the bucket, host name and credentials for your Couchbase cluster.
+- Run the application
+  `streamlit run insurance_quote_app.py`
+- The application can be used to run inference against the model running on Couchbase.
