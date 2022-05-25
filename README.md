@@ -4,7 +4,7 @@
 
 - Couchbase can be run as a Docker container
 
-  `docker run -d -p 8091-8094:8091-8094 -p 11210:11210 --name ml_db couchbase`
+  `docker run -d -p 8091-8096:8091-8096 -p 11210:11210 --name ml_db couchbase`
 
 - Setting Up
 
@@ -20,7 +20,7 @@
 
   More information on importing data can be found [here](https://docs.couchbase.com/server/current/manage/import-documents/import-documents.html).
 
-- Enabling Python UDFs on Couchbase
+- Enabling Python UDFs on Couchbase Analytics
 
   `docker exec -it ml_db bash /opt/couchbase/bin/couchbase-cli enable-developer-preview -c localhost:8091 -u <username> -p <password> --enable`
 
