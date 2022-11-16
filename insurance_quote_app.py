@@ -7,12 +7,15 @@ import uuid
 import streamlit as st
 from couchbase.analytics import AnalyticsScanConsistency
 from couchbase.auth import PasswordAuthenticator
-from couchbase.cluster import (
+
+from couchbase.exceptions import CouchbaseException
+from dotenv import load_dotenv
+from couchbase.options import (
     AnalyticsOptions,
-    Cluster,
     ClusterOptions,
     ClusterTimeoutOptions,
 )
+from couchbase.cluster import Cluster
 from couchbase.exceptions import CouchbaseException
 from dotenv import load_dotenv
 

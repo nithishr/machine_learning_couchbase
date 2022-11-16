@@ -47,11 +47,11 @@
 
 - Log in to Docker Container running Couchbase
 
-  `docker exec -it bash`
+  `docker exec -it ml_db bash`
 
 - Deploy the model into Couchbase Analytics Service
 
-  `cd temp`
+  `cd /tmp`
 
   `curl -v -X POST -F "data=@./pipeline.pyz" -F "type=python" "localhost:8095/analytics/library/Default/insurancequote" -u <username>:<password>;`
 
