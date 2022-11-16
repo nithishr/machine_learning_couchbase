@@ -1,6 +1,6 @@
 category_encoders==2.3.0
 couchbase==4.1.0
-numpy==1.21.4
+numpy==1.22.0
 pandas==1.3.4
 python-dotenv==0.20.0
 scikit_learn==1.0.1
